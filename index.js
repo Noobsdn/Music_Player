@@ -43,6 +43,33 @@ const songs=[
         poster: "img5.jpeg",
         sname: "Akh Lad Jave", 
         subtitle: "Jubin Natyiel"
+    },
+    {
+        id: 6,
+        songName: `<h5>Chal Wahan Jate Hain<br>
+                        <div class="subtitle">Arijeet Singh</div>
+                    </h5>`,
+        poster: "img6.jpeg",
+        sname: "Chal Wahan Jate Hai", 
+        subtitle: "Arijeet Singh"
+    },
+    {
+        id: 7,
+        songName: `<h5>The Humma<br>
+                        <div class="subtitle">A.R Rahman</div>
+                    </h5>`,
+        poster: "img7.jpeg",
+        sname: "The Humma", 
+        subtitle: "A.R Rahman"
+    },
+    {
+        id: 8,
+        songName: `<h5>Saware<br>
+                        <div class="subtitle">Arijeet Singh</div>
+                    </h5>`,
+        poster: "img8.jpeg",
+        sname: "Saware", 
+        subtitle: "Arijeet Singh"
     }
 ]
 
