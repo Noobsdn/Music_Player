@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Sedan:ital@0;1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Sedan", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #121213;
+    display: grid;
+    place-items: center;
+}
+header{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    opacity: .9 ;
+}
+header .menu{
+    width: 100%;
+    height: 85%;
+    /* border: 1px solid white; */
+    background-color: #000615;
+    /* opacity: 0.6; */
+    box-shadow: 0px 0px 5px 0px rgb(0, 0, 6);
+    color: white;
+}
+
+header .music_play{
+    width: 100%;
+    height: 15%;
+    /* border: 1px solid white; */
+    background-color: #000b2b;
+    box-shadow: 0px 0px 5px 0px rgb(0, 0, 6);
+    display: flex;
+    flex-direction: column;
+    opacity: .75;
+
+}
+header .music_play .before_currentStart{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    /* flex-direction: column; */
+
+}
+header .music_play .after_currentStart{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    /* flex-direction: column; */
+
+}
+
+header .menu h1{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 12px 0 0 20px;
+}
+header .menu .playlist{
+    margin: 35px 0 40px 20px;
+}
+header .menu .playlist h4{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #4c5262;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: linear;
+}
+header .menu .playlist h4:hover{
+    color: white;
+}
+header .menu .playlist h4 span{
+    position: relative;
+    margin-right: 35px;
+}
+header .menu .playlist h4 span::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    top: -5.5px;
+    transition: linear;
+    left: 3px;
+}
+header .menu .playlist h4:hover span::before{
+    border: 2px solid white;
+}
+header .menu .playlist h4 .bi{
+    display: none;
+}
+header .menu .playlist .active{
+    color: #36e2ec;
+}
+header .menu .playlist .active span{
+    display: none;
+}
+header .menu .playlist .active .bi{
+    display: unset;
+}
+header .menu .menu_song{
+    width: 95%;
+    height: 62vh;
+    /* border: 2px solid white; */
+    margin-top: 10px;
+    overflow: auto;
+}
+header .menu .blur{
+    filter: blur(2px);
+    opacity: .1;
+}
+header .menu .menu_song::-webkit-scrollbar{
+    display: none;
+}
+header .menu .menu_song li{
+    list-style-type: none;
+    position: relative;
+    padding: 5px 0 5px 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: linear;
+}
+header .menu .menu_song .songItem:hover{
+    background-color: rgb(105, 105, 105, 0.1);
+}
+header .menu .menu_song li span{
+    color: #4c5262;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+header .menu .menu_song li img{
+    width: max(30px, 3vw);
+    height: max(30px, 3vw);
+}
+.songItem_img_title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+header .menu .menu_song li h5{
+    font-size: .8rem;
+    /* margin-left: 15px; */
+    width: 75%;
+    /* border: 1px solid white; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+header .menu .menu_song li h5 .subtitle{
+    font-size: 0.6rem;
+    color: #4c5262;
+}
+header .music_play{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: white; */
+}
+header .menu .wave{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 32px;
+}
+header .menu .wave .wave1{
+    width: 3px;
+    height: 10px;
+    margin-right: 3px;
+    background: rgb(183, 3, 3);
+    animation: unset;
+}
+header .menu .wave .wave1:nth-child(2){
+    height: 13px;
+}
+header .menu .wave .wave1:nth-child(3){
+    height: 8px;
+}
+
+/* for JavaScript */
+header .menu .active1 .wave1{
+    animation: waves 0.5s linear infinite;
+}
+header .menu .active1 .wave1:nth-child(2){
+    animation-delay: 0.4s;
+}
+header .menu .active1 .wave1:nth-child(3){
+    animation-delay: 0.8s;
+
+}
+@keyframes waves {
+    0%{
+        height: 10px;
+    }
+    50%{
+        height: 15px;
+    }
+    100%{
+        height: 10px;
+    }
+}
+header .menu .container {
+    position: relative;
+    left: 22px;
+    bottom: 10px;
+    opacity: .5;
+}
+header .menu .container img{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+header .menu .container h5{
+    width: 130px;
+    color: white;
+    margin-left: 6px;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* border: 1px solid white; */
+    font-size: 0.8rem;
+    position: relative;
+    top: 2px;
+}
+header .menu .container h5 .subtitle{
+    color: #4c5262;
+    /* color: red; */
+    font-size: 0.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* border: 1px solid white; */
+}
+header .menu .container .search{
+    display: flex;
+}
+header .music_play .before_currentStart .icon{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .music_play .icon #repeat{
+    font-size: 23px;
+    width: 23.5px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    /* margin-right: 50px; */
+}
+header .music_play .icon #download{
+    text-decoration: none;
+    color: white;
+}
+header .music_play span#currentStart{
+    font-family: "Roboto Slab", serif;
+    color: white;
+    font-weight: 500;
+    /* border: 1px solid red; */
+    width: 42px;
+    margin-top: 1px;
+    margin-right: 10px;
+}
+header .music_play .bar{
+    position: relative;
+    height: 6px;
+    border-radius: 5px;
+    width: 100%;
+    background: rgb(105, 105, 170, 0.1);
+    /* background: red; */
+    margin: 4px 18px 8px 0;
+    left: 5px;
+    top: 6px;
+    cursor: pointer;
+    /* margin-left: 20px; */
+
+}
+header .music_play .bar .bar2{
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: red;
+    border-radius: 5px 0 0 5px;
+    top: 0;
+    transition: linear;
+    cursor: pointer;
+}
+header .music_play .bar .dot{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    top: -4.5px;
+    left: -3px;
+    border-radius: 50%;
+    transition: linear;
+    cursor: pointer;
+    z-index: 2;
+}
+header .music_play .bar input{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -4px;
+    left: -1px;
+    opacity: 0;
+}
+header .music_play span#currentEnd{
+    font-family: "Roboto Slab", serif;
+    color: white;
+    font-weight: 500;
+    /* border: 1px solid red; */
+    width: 42px;
+    margin-left: 10px;
+}
+
+/* header .menu .search{
+    position: relative;
+    height: 32px;
+    width: 60%;
+    background: rgb(184, 184, 184, 0.1);
+    margin-top: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+    gap: 15px;
+    margin-bottom: 20px;
+} */
+/* header .menu .container .search input{
+    color: white;
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+}
+header .menu .container .search .bi{
+    color: #4c5262;
+} */
+/*
+ header .menu .container .search .search_results{
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    border: 1px solid red;
+    top: 37px;
+    left: 1px;
+    border-radius:15px;
+    z-index: 3;
+    overflow: auto;
+}
+header .menu .container .search .search_results .card{
+    min-height: 38px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(184, 184, 184, 0.08);
+    margin-bottom: 5px;
+    text-decoration: none;
+    z-index: 3;
+    display: none;
+}
+header .menu .container .search .search_results .card img{
+    height: 35px;
+    width: 35px;
+}
+header .menu .container .search .search_results .card .content{
+    font-size: 0.9rem;
+    width: 80%;
+    height: 100%;
+    margin-left: 15px;
+    color: white;
+}
+header .menu .container .search .search_results .card .subtitle{
+    font-size: 0.7rem;
+    color: #4c5262;
+} 
+*/
+header .menu .container{
+    display: flex;
+    justify-content: space-between;
+}

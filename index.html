@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Player</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1>Hello There</h1> -->
+    <header>
+        <div class="menu">
+            <div class="playlist">
+                <h4 class="active"><span></span><i class="bi bi-file-music-fill"></i>Awesome Music Player</h4>
+
+            </div>
+            <div class="container">
+                <div class="search" id="search__">
+                    <!-- <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search Music..." id="first_input">
+                    <div class="search_results">
+                        <a href="" class="card">
+                            <img src="img1.jpeg" alt="">
+                            <div class="content">
+                                Baarish
+                                <div class="subtitle">Arijeet Singh</div>
+                            </div>
+                        </a>
+                    </div> -->
+                    <img id="poster_music_player" src="img1.jpeg" alt="imgs">
+                    <h5 id="title">Baarish<br>
+                        <div class="subtitle">Arijeet Singh</div>
+                    </h5>
+                </div>
+                <div class="wave">
+                    <div class="wave1"></div>
+                    <div class="wave1"></div>
+                    <div class="wave1"></div>
+                    <div class="wave1"></div>
+                </div>
+            </div>
+            <div class="menu_song">
+                <li class="songItem">
+                    <div>
+                        <div class="songItem_img_title">
+                            <span>01</span>
+                            <img src="img1.jpeg" alt="Baarish">
+                            <h5>Baarish<br>
+                                <div class="subtitle">Arijeet Singh</div>
+                            </h5>
+                        </div>
+                    </div>
+                    <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+                </li>
+                <li class="songItem">
+                    <div>
+                        <div class="songItem_img_title">
+                            <span>02</span>
+                            <img src="img2.jpeg" alt="cheekniChameli">
+                            <h5>Cheekni Chameli <br>
+                                <div class="subtitle">Ajay-Atul and Shreya Ghoshal</div>
+                            </h5>
+                        </div>
+                    </div>
+                    <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+                </li>
+                <li class="songItem">
+                    <div>
+                        <div class="songItem_img_title">
+                            <span>03</span>
+                            <img src="img3.jpeg" alt="Aharee">
+                            <h5>Aharee<br>
+                                <div class="subtitle">Minar</div>
+                            </h5>
+                        </div>
+                    </div>
+                    <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+                </li>
+                <li class="songItem">
+                    <div>
+                        <div class="songItem_img_title">
+                            <span>04</span>
+                            <img src="img4.jpeg" alt="WohLamhe">
+                            <h5>Woh Lamhe<br>
+                                <div class="subtitle">Atif Aslam</div>
+                            </h5>
+                        </div>
+                    </div>
+                    <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+                </li>
+                <li class="songItem">
+                    <div>
+                        <div class="songItem_img_title">
+                            <span>05</span>
+                            <img src="img5.jpeg" alt="AkhLadJave">
+                            <h5>Akh Lad Jave<br>
+                                <div class="subtitle">Jubin Natyiel</div>
+                            </h5>
+                        </div>
+                    </div>
+                    <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+                </li>
+            </div>
+        </div>
+
+        <div class="music_play">
+            <div class="after_currentStart">
+                <span id="currentStart">00:00</span>
+                <div class="bar">
+                    <input type="range" id="seek" min="0" max="100">
+                    <div class="bar2" id="bar2"></div>
+                    <div class="dot"></div>
+                </div>
+                <span id="currentEnd">00:00</span>
+            </div>
+            <div class="before_currentStart">
+                <div class="icon">
+                    <div>
+                        <i class="bi bi-repeat-1" id="repeat"></i>
+                    </div>
+                    <div>
+                        <i class="bi bi-skip-start-fill" id="back"></i>
+                        <i class="bi bi-play-fill" id="master_play"></i>
+                        <i class="bi bi-skip-end-fill" id="next"></i>
+                    </div>
+                    <div>
+                        <a href="" id="download"><i class="bi bi-cloud-arrow-down-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>
