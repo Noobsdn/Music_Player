@@ -145,6 +145,19 @@ const music=new Audio("song1.mp3");
 const download=document.getElementById("download");
 const change_play_type=document.getElementById("repeat");
 
+
+const click_songs=document.getElementsByClassName("songItem");
+
+Array.from(click_songs).forEach((e)=>{
+    e.addEventListener('click', ()=>{
+        let i=e.getElementsByTagName('span')[0];
+        index=parseInt(i.innerHTML);
+        // console.log(parseInt(i.innerHTML));
+        music_play(index);
+        
+    })
+})
+
 function change_play(){
     if(change_play_type.classList[1]=="bi-repeat"){
         index++;
