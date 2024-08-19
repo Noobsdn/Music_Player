@@ -70,7 +70,71 @@ const songs=[
         poster: "img8.jpeg",
         sname: "Saware", 
         subtitle: "Arijeet Singh"
-    }
+    },
+    {
+        id: 9,
+        songName: `<h5>Ajnabi<br>
+                        <div class="subtitle">Atif Aslam</div>
+                    </h5>`,
+        poster: "img9.jpeg",
+        sname: "Ajnabi", 
+        subtitle: "Atif Aslam"
+    },
+    {
+        id: 10,
+        songName: `<h5>Pehli Nazar Mein<br>
+                        <div class="subtitle">Atif Aslam</div>
+                    </h5>`,
+        poster: "img10.jpeg",
+        sname: "Pehli Nazar Mein", 
+        subtitle: "Atif Aslam"
+    },
+    // {
+    //     id: 11,
+    //     songName: `<h5>Apna Bana Le<br>
+    //                     <div class="subtitle">Arijeet Singh</div>
+    //                 </h5>`,
+    //     poster: "img11.jpeg",
+    //     sname: "Apna Bana Le", 
+    //     subtitle: "Arijeet Singh"
+    // },
+    // {
+    //     id: 12,
+    //     songName: `<h5>Kesariya<br>
+    //                     <div class="subtitle">Arijeet Singh</div>
+    //                 </h5>`,
+    //     poster: "img12.jpeg",
+    //     sname: "Kesariya", 
+    //     subtitle: "Arijeet Singh"
+    // },
+    // {
+    //     id: 13,
+    //     songName: `<h5>Pal <br>
+    //                     <div class="subtitle">Arijeet Singh</div>
+    //                 </h5>`,
+    //     poster: "img13.jpeg",
+    //     sname: "Pal ", 
+    //     subtitle: "Arijeet Singh"
+    // },
+    // {
+    //     id: 14,
+    //     songName: `<h5>Keno Megh Ashe<br>
+    //                     <div class="subtitle">Arnob</div>
+    //                 </h5>`,
+    //     poster: "img14.jpeg",
+    //     sname: "Keno Megh Ashe", 
+    //     subtitle: "Arnob"
+    // },
+    // {
+    //     id: 15,
+    //     songName: `<h5>Aaj Phir<br>
+    //                     <div class="subtitle">Arijeet Singh</div>
+    //                 </h5>`,
+    //     poster: "img15.jpeg",
+    //     sname: "Aaj Phir", 
+    //     subtitle: "Arijeet Singh"
+    // }
+
 ]
 
 let index=1;
