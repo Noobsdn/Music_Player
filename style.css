@@ -155,6 +155,10 @@ header .menu .menu_song li img{
     gap: 10px;
     align-items: center;
 }
+#master_play_back_next{
+    display: flex;
+    gap: 40px;
+}
 header .menu .menu_song li h5{
     font-size: .8rem;
     /* margin-left: 15px; */
