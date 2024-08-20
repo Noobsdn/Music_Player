@@ -173,9 +173,24 @@ function change_play(){
     }
 }
 
+let preloadedAudioFiles = [];
+
+// Preload audio files
+window.onload = () => {
+    songs.forEach((song, i) => {
+        preloadedAudioFiles[i] = new Audio(`song${song.id}.mp3`);
+        // console.log(preloadedAudioFiles[i]);
+    });
+};
+// console.log(preloadedAudioFiles);
+
 function music_play(index){
-    music.src=`song${index}.mp3`;
-    music.play();
+    music.src = preloadedAudioFiles[index - 1].src;
+    // music.src=`song${index}.mp3`;
+    // console.log(music.src)
+    music.addEventListener('canplay', ()=>{
+        music.play();
+    })
     poster.src=`img${index}.jpeg`;
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
